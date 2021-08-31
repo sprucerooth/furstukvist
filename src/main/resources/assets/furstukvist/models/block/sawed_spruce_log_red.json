@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "minecraft:block/stripped_acacia_log_top",
+    "side": "furstukvist:block/sawed_spruce_log_red"
+  }
+}

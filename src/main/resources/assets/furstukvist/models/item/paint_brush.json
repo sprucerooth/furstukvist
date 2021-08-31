@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "furstukvist:item/paint_brush"
+  }
+}

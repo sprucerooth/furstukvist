@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "M",
+    "O",
+    "I"
+  ],
+  "key": {
+    "M": {
+      "item": "furstukvist:hog_bristles"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "O": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "furstukvist:paint_brush"
+  }
+}

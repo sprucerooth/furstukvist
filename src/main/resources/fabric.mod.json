@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "furstukvist",
+  "version": "${version}",
+  "name": "FurstuKvist",
+  "description": "Expanded tools for building and decorating, focusing on traditional Swedish house construction",
+  "authors": [
+    "sprucerooth"
+  ],
+  "contact": {
+    "sources": "https://github.com/sprucerooth/furstukvist"
+  },
+  "license": "",
+  "icon": "paint_brush.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "com.sprucerooth.furstukvist.FurstuKvist"
+      }
+    ]
+  },
+  "mixins": [
+    "mod_id.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.6",
+    "fabric": "*",
+    "fabric-language-kotlin": ">=1.6.3+kotlin.1.5.21",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  }
+}

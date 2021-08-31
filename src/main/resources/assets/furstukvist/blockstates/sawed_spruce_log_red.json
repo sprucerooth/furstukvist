@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "furstukvist:block/sawed_spruce_log_red_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "furstukvist:block/sawed_spruce_log_red"
+    },
+    "axis=z": {
+      "model": "furstukvist:block/sawed_spruce_log_red_horizontal",
+      "x": 90
+    }
+  }
+}
