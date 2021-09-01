@@ -1,7 +1,8 @@
 {
-  "parent": "block/cube_column_horizontal",
+  "parent": "furstukvist:block/log_horizontal",
   "textures": {
-    "end": "minecraft:block/stripped_acacia_log_top",
-    "side": "furstukvist:block/sawed_spruce_log_red"
+    "side": "furstukvist:block/sawed_spruce_log_horizontal_red_side",
+    "end": "furstukvist:block/sawed_spruce_log_horizontal_red_end",
+    "y": "furstukvist:block/sawed_spruce_log_horizontal_red_y"
   }
 }

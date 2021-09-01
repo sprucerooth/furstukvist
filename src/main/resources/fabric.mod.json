@@ -11,7 +11,7 @@
     "sources": "https://github.com/sprucerooth/furstukvist"
   },
   "license": "",
-  "icon": "paint_brush.png",
+  "icon": "assets/furstukvist/textures/item/paint_brush.png",
   "environment": "*",
   "entrypoints": {
     "main": [

@@ -1,9 +1,11 @@
 {
+  "itemGroup.furstukvist.general": "Furstukvist",
   "item.furstukvist.paint_brush": "Pensel",
   "item.furstukvist.paint_brush_red": "Pensel",
   "item.furstukvist.paint_brush_red.tooltip": "Rödfärg",
   "item.furstukvist.hog_bristles": "Svinborst",
   "item.furstukvist.paint_bucket_red": "Målarburk",
   "item.furstukvist.paint_bucket_red.tooltip": "Rött pigment",
-  "block.furstukvist.sawed_spruce_log": "Sågade granstockar"
+  "block.furstukvist.sawed_spruce_log": "Sågade granstockar",
+  "block.furstukvist.sawed_spruce_log_red": "Röda sågade granstockar"
 }
