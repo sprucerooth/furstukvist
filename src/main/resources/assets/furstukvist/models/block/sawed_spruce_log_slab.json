@@ -1,0 +1,51 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "particle": "furstukvist:block/sawed_spruce_log_horizontal_side",
+    "side": "furstukvist:block/sawed_spruce_log_horizontal_side",
+    "end": "furstukvist:block/sawed_spruce_log_horizontal_end",
+    "y": "furstukvist:block/sawed_spruce_log_horizontal_y"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "#y",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "#y",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "#side",
+          "cullface": "north",
+          "rotation": 270
+        },
+        "south": {
+          "texture": "#side",
+          "cullface": "south",
+          "rotation": 270
+        },
+        "west": {
+          "texture": "#end",
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#end",
+          "cullface": "east"
+        }
+      }
+    }
+  ]
+}

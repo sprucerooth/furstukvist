@@ -22,4 +22,10 @@ object BlockItems {
         )
     )
 
+    val SAWED_SPRUCE_LOG_SLAB: Item =
+        RegistryUtil.register(
+            "sawed_spruce_log_slab",
+            BlockItem(Blocks.SAWED_SPRUCE_LOG_SLAB, FabricItemSettings().group(ItemGroups.GROUP_GENERAL))
+        )
+
 }
