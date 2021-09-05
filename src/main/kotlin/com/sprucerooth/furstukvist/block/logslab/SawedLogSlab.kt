@@ -12,6 +12,7 @@ import net.minecraft.util.math.Vec3d
 import net.minecraft.util.shape.VoxelShape
 import net.minecraft.util.shape.VoxelShapes
 import net.minecraft.world.BlockView
+import kotlin.math.floor
 
 class SawedLogSlab(
     val color: Pigment? = null,
@@ -51,15 +52,14 @@ class SawedLogSlab(
 
         return defaultState.with(Properties.HORIZONTAL_FACING, blockFacingDirection)
     }
-
 }
 
 private fun isPlayerFacingNearestHalfOfBlock(dir: Direction, hitPos: Vec3d): Boolean {
     return when (dir) {
-        Direction.NORTH -> (hitPos.z - 0.5).toInt() == hitPos.z.toInt()
-        Direction.SOUTH -> (hitPos.z + 0.5).toInt() == hitPos.z.toInt()
-        Direction.WEST -> (hitPos.x - 0.5).toInt() == hitPos.x.toInt()
-        Direction.EAST -> (hitPos.x + 0.5).toInt() == hitPos.x.toInt()
+        Direction.NORTH -> floor(hitPos.z - 0.5) == floor(hitPos.z)
+        Direction.SOUTH -> floor(hitPos.z + 0.5) == floor(hitPos.z)
+        Direction.WEST -> floor(hitPos.x - 0.5) == floor(hitPos.x)
+        Direction.EAST -> floor(hitPos.x + 0.5) == floor(hitPos.x)
         else -> true
     }
 }
