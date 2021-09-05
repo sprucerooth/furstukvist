@@ -12,6 +12,7 @@ import net.minecraft.util.math.Vec3d
 import net.minecraft.util.shape.VoxelShape
 import net.minecraft.util.shape.VoxelShapes
 import net.minecraft.world.BlockView
+import kotlin.math.ceil
 import kotlin.math.floor
 
 class SawedLogSlab(
@@ -57,9 +58,9 @@ class SawedLogSlab(
 private fun isPlayerFacingNearestHalfOfBlock(dir: Direction, hitPos: Vec3d): Boolean {
     return when (dir) {
         Direction.NORTH -> floor(hitPos.z - 0.5) == floor(hitPos.z)
-        Direction.SOUTH -> floor(hitPos.z + 0.5) == floor(hitPos.z)
+        Direction.SOUTH -> ceil(hitPos.z + 0.5) == ceil(hitPos.z)
         Direction.WEST -> floor(hitPos.x - 0.5) == floor(hitPos.x)
-        Direction.EAST -> floor(hitPos.x + 0.5) == floor(hitPos.x)
+        Direction.EAST -> ceil(hitPos.x + 0.5) == ceil(hitPos.x)
         else -> true
     }
 }
