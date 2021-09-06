@@ -47,22 +47,27 @@ class SawedLogSlab(
 
     override fun getPlacementState(ctx: ItemPlacementContext): BlockState {
         val blockFacingDirection =
-            if (isPlayerFacingNearestHalfOfBlock(
+            if (targetedBlockHalf(
                     ctx.playerFacing,
                     ctx.hitPos
-                )
+                ) == BlockHalf.NEAREST
             ) ctx.playerFacing.opposite else ctx.playerFacing
 
         return defaultState.with(Properties.HORIZONTAL_FACING, blockFacingDirection)
     }
 }
 
-private fun isPlayerFacingNearestHalfOfBlock(dir: Direction, hitPos: Vec3d): Boolean {
+private fun targetedBlockHalf(dir: Direction, hitPos: Vec3d): BlockHalf {
     return when (dir) {
-        Direction.NORTH -> floor(hitPos.z - 0.5) == floor(hitPos.z)
-        Direction.SOUTH -> ceil(hitPos.z + 0.5) == ceil(hitPos.z)
-        Direction.WEST -> floor(hitPos.x - 0.5) == floor(hitPos.x)
-        Direction.EAST -> ceil(hitPos.x + 0.5) == ceil(hitPos.x)
-        else -> true
+        Direction.NORTH -> if (floor(hitPos.z - 0.5) == floor(hitPos.z)) BlockHalf.NEAREST else BlockHalf.FARTHEST
+        Direction.SOUTH -> if (ceil(hitPos.z + 0.5) == ceil(hitPos.z)) BlockHalf.NEAREST else BlockHalf.FARTHEST
+        Direction.WEST -> if (floor(hitPos.x - 0.5) == floor(hitPos.x)) BlockHalf.NEAREST else BlockHalf.FARTHEST
+        Direction.EAST -> if (ceil(hitPos.x + 0.5) == ceil(hitPos.x)) BlockHalf.NEAREST else BlockHalf.FARTHEST
+        else -> BlockHalf.NEAREST
     }
+}
+
+private enum class BlockHalf {
+    NEAREST,
+    FARTHEST
 }
