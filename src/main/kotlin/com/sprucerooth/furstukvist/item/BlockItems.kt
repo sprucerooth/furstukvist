@@ -3,6 +3,7 @@ package com.sprucerooth.furstukvist.item
 import com.sprucerooth.furstukvist.block.Blocks
 import com.sprucerooth.furstukvist.util.RegistryUtil
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
+import net.fabricmc.fabric.api.registry.FuelRegistry
 import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
 
@@ -28,4 +29,9 @@ object BlockItems {
             BlockItem(Blocks.SAWED_SPRUCE_LOG_SLAB, FabricItemSettings().group(ItemGroups.GROUP_GENERAL))
         )
 
+    init {
+        FuelRegistry.INSTANCE.add(SAWED_SPRUCE_LOG, 600)
+        FuelRegistry.INSTANCE.add(SAWED_SPRUCE_LOG_RED, 600)
+        FuelRegistry.INSTANCE.add(SAWED_SPRUCE_LOG_SLAB, 300)
+    }
 }

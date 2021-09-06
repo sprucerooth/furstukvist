@@ -2,6 +2,7 @@ package com.sprucerooth.furstukvist.block.logslab
 
 import com.sprucerooth.furstukvist.Pigment
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry
 import net.minecraft.block.*
 import net.minecraft.item.ItemPlacementContext
 import net.minecraft.state.StateManager
@@ -22,6 +23,7 @@ class SawedLogSlab(
 
     init {
         defaultState = stateManager.defaultState.with(Properties.HORIZONTAL_FACING, Direction.NORTH)
+        FlammableBlockRegistry.getDefaultInstance().add(this, 4, 4)
     }
 
     override fun appendProperties(builder: StateManager.Builder<Block, BlockState>) {
