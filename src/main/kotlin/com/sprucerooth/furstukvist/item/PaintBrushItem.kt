@@ -18,14 +18,14 @@ import net.minecraft.world.World
 
 val PAINTED_LOGS: ImmutableMap<Pigment, Block> = ImmutableMap.of(Pigment.RED, Blocks.SAWED_SPRUCE_LOG_RED)
 
-class PaintBrushItem(settings: Settings, val color: Pigment? = null) : Item(settings) {
+class PaintBrushItem(settings: Settings, private val color: Pigment? = Pigment.NONE) : Item(settings) {
 
     override fun useOnBlock(context: ItemUsageContext): ActionResult {
         val world = context.world
         val blockPos = context.blockPos
         val blockState = world.getBlockState(blockPos)
 
-        if (color != null && isPaintable(blockState.block)) {
+        if (color != Pigment.NONE && isPaintable(blockState.block)) {
             context.player?.playSound(SoundEvents.BLOCK_WOOL_BREAK, 1.0F, 1.0F)
             if (!world.isClient) {
                 val paintedBlockState =
@@ -41,7 +41,7 @@ class PaintBrushItem(settings: Settings, val color: Pigment? = null) : Item(sett
     }
 
     override fun appendTooltip(stack: ItemStack, world: World?, tooltip: MutableList<Text>, context: TooltipContext) {
-        if (color != null) tooltip.add(TranslatableText("${translationKey}.tooltip"))
+        if (color != Pigment.NONE) tooltip.add(TranslatableText("${translationKey}.tooltip"))
     }
 
     private fun isPaintable(block: Block) = block is SawedLogBlock && block.color != color

@@ -9,7 +9,8 @@ import net.minecraft.block.PillarBlock
 import net.minecraft.sound.BlockSoundGroup
 
 class SawedLogBlock(
-    val color: Pigment? = null, settings: Settings = FabricBlockSettings.of(Material.WOOD).strength(4.0F).sounds(
+    val color: Pigment? = Pigment.NONE,
+    settings: Settings = FabricBlockSettings.of(Material.WOOD).strength(4.0F).sounds(
         BlockSoundGroup.WOOD
     ).requiresTool().breakByTool(FabricToolTags.AXES)
 ) :

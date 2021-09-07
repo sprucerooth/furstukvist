@@ -17,7 +17,7 @@ import kotlin.math.ceil
 import kotlin.math.floor
 
 class SawedLogSlab(
-    val color: Pigment? = null,
+    val color: Pigment? = Pigment.NONE,
     settings: Settings? = FabricBlockSettings.of(Material.WOOD)
 ) : HorizontalFacingBlock(settings) {
 
