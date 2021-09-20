@@ -29,9 +29,16 @@ object BlockItems {
             BlockItem(Blocks.SAWED_SPRUCE_LOG_SLAB, FabricItemSettings().group(ItemGroups.GROUP_GENERAL))
         )
 
+    val SAWED_SPRUCE_LOG_SLAB_RED: Item =
+        RegistryUtil.register(
+            "sawed_spruce_log_slab_red",
+            BlockItem(Blocks.SAWED_SPRUCE_LOG_SLAB_RED, FabricItemSettings().group(ItemGroups.GROUP_GENERAL))
+        )
+
     init {
         FuelRegistry.INSTANCE.add(SAWED_SPRUCE_LOG, 600)
         FuelRegistry.INSTANCE.add(SAWED_SPRUCE_LOG_RED, 600)
         FuelRegistry.INSTANCE.add(SAWED_SPRUCE_LOG_SLAB, 300)
+        FuelRegistry.INSTANCE.add(SAWED_SPRUCE_LOG_SLAB_RED, 300)
     }
 }

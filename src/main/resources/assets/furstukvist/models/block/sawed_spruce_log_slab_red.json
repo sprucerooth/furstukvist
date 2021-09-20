@@ -1,0 +1,9 @@
+{
+  "parent": "furstukvist:block/vertical_slab",
+  "textures": {
+    "particle": "furstukvist:block/sawed_spruce_log_horizontal_red_side",
+    "side": "furstukvist:block/sawed_spruce_log_horizontal_red_side",
+    "end": "furstukvist:block/sawed_spruce_log_horizontal_red_end",
+    "y": "furstukvist:block/sawed_spruce_log_horizontal_red_y"
+  }
+}

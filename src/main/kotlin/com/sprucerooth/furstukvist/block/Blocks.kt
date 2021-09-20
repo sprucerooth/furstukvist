@@ -16,4 +16,7 @@ object Blocks {
 
     val SAWED_SPRUCE_LOG_SLAB: Block =
         RegistryUtil.register("sawed_spruce_log_slab", SawedLogSlab())
+
+    val SAWED_SPRUCE_LOG_SLAB_RED: Block =
+        RegistryUtil.register("sawed_spruce_log_slab_red", SawedLogSlab(Pigment.RED))
 }

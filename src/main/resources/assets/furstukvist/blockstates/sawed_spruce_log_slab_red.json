@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "furstukvist:block/sawed_spruce_log_slab_red",
+      "uvlock": true
+    },
+    "facing=east": {
+      "model": "furstukvist:block/sawed_spruce_log_slab_red",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south": {
+      "model": "furstukvist:block/sawed_spruce_log_slab_red",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west": {
+      "model": "furstukvist:block/sawed_spruce_log_slab_red",
+      "y": 270,
+      "uvlock": true
+    }
+  }
+}
