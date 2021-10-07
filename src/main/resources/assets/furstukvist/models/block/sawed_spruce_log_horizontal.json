@@ -1,8 +1,0 @@
-{
-  "parent": "furstukvist:block/log_horizontal",
-  "textures": {
-    "side": "furstukvist:block/sawed_spruce_log_horizontal_side",
-    "end": "furstukvist:block/sawed_spruce_log_horizontal_end",
-    "y": "furstukvist:block/sawed_spruce_log_horizontal_y"
-  }
-}

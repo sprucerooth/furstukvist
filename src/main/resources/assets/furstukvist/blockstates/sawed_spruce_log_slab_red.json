@@ -1,23 +1,28 @@
 {
-  "variants": {
-    "facing=north": {
-      "model": "furstukvist:block/sawed_spruce_log_slab_red",
-      "uvlock": true
+  "multipart": [
+    {
+      "when" : { "type": "north_facing" },
+      "apply": { "model": "furstukvist:block/sawed_spruce_log_slab_red" }
     },
-    "facing=east": {
-      "model": "furstukvist:block/sawed_spruce_log_slab_red",
-      "y": 90,
-      "uvlock": true
+    {
+      "when" : { "type": "east_facing" },
+      "apply": { "model": "furstukvist:block/sawed_spruce_log_slab_red", "y": 90 }
     },
-    "facing=south": {
-      "model": "furstukvist:block/sawed_spruce_log_slab_red",
-      "y": 180,
-      "uvlock": true
+    {
+      "when" : { "type": "south_facing" },
+      "apply": { "model": "furstukvist:block/sawed_spruce_log_slab_red", "y": 180 }
     },
-    "facing=west": {
-      "model": "furstukvist:block/sawed_spruce_log_slab_red",
-      "y": 270,
-      "uvlock": true
+    {
+      "when" : { "type": "west_facing" },
+      "apply": { "model": "furstukvist:block/sawed_spruce_log_slab_red", "y": 270 }
+    },
+    {
+      "when" : { "type": "double", "axis": "x" },
+      "apply": { "model": "furstukvist:block/sawed_spruce_log_red", "x": 90 }
+    },
+    {
+      "when" : { "type": "double", "axis": "z" },
+      "apply": { "model": "furstukvist:block/sawed_spruce_log_red", "x": 90, "y": 90 }
     }
-  }
+  ]
 }
