@@ -1,16 +1,20 @@
 {
-  "variants": {
-    "axis=x": {
-      "model": "furstukvist:block/sawed_spruce_log_horizontal",
-      "x": 90,
-      "y": 90
+  "multipart": [
+    {
+      "when" : { "axis": "y", "facing": "north|south" },
+      "apply": { "model": "furstukvist:block/sawed_spruce_log" }
     },
-    "axis=y": {
-      "model": "furstukvist:block/sawed_spruce_log"
+    {
+      "when" : { "axis": "y", "facing": "east|west" },
+      "apply": { "model": "furstukvist:block/sawed_spruce_log", "y": 90 }
     },
-    "axis=z": {
-      "model": "furstukvist:block/sawed_spruce_log_horizontal",
-      "x": 90
+    {
+      "when" : { "axis": "x" },
+      "apply": { "model": "furstukvist:block/sawed_spruce_log", "x": 90, "y": 90 }
+    },
+    {
+      "when" : { "axis": "z" },
+      "apply": { "model": "furstukvist:block/sawed_spruce_log", "x": 90 }
     }
-  }
+  ]
 }

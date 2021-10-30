@@ -1,8 +1,8 @@
 {
-  "parent": "block/cube_column",
+  "parent"  : "furstukvist:block/log",
   "textures": {
-    "side": "furstukvist:block/sawed_spruce_log_horizontal_side",
-    "end": "furstukvist:block/sawed_spruce_log_horizontal_end",
-    "y": "furstukvist:block/sawed_spruce_log_horizontal_y"
+    "side"       : "furstukvist:block/sawed-log/sawed_spruce_log_side",
+    "end"        : "furstukvist:block/sawed-log/sawed_spruce_log_end",
+    "smooth_side": "furstukvist:block/sawed-log/sawed_spruce_log_y"
   }
 }

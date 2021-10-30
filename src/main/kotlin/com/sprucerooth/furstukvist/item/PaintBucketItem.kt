@@ -7,7 +7,7 @@ import net.minecraft.text.Text
 import net.minecraft.text.TranslatableText
 import net.minecraft.world.World
 
-class PaintBucketItem(settings: Settings, val color: String) : Item(settings) {
+class PaintBucketItem(settings: Settings, private val color: String) : Item(settings) {
 
     override fun appendTooltip(stack: ItemStack, world: World?, tooltip: MutableList<Text>, context: TooltipContext) {
         tooltip.add(TranslatableText("item.furstukvist.paint_bucket_$color.tooltip"))
