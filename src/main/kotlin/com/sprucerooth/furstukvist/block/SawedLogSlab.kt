@@ -79,9 +79,6 @@ class SawedLogSlab(
         return state.get(TYPE) != LogSlabType.DOUBLE
     }
 
-    override fun isTranslucent(state: BlockState?, world: BlockView?, pos: BlockPos?): Boolean {
-        return false
-    }
 
 }
 

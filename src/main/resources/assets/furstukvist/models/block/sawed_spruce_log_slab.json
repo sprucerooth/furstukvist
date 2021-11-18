@@ -2,7 +2,7 @@
   "parent"  : "furstukvist:block/log_slab",
   "textures": {
     "side": "furstukvist:block/sawed-log/sawed_spruce_log_side",
-    "end" : "furstukvist:block/sawed-log/sawed_spruce_log_end",
-    "y"   : "furstukvist:block/sawed-log/sawed_spruce_log_y"
+    "end" : "furstukvist:block/sawed-log/sawed_spruce_log_slab_end",
+    "y"   : "furstukvist:block/sawed-log/sawed_spruce_log_slab_y"
   }
 }
