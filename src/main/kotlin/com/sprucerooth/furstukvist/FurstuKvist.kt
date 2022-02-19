@@ -6,7 +6,6 @@ import com.sprucerooth.furstukvist.item.Items
 import com.sprucerooth.furstukvist.loot.LootTables
 import net.fabricmc.api.ModInitializer
 
-@Suppress("UNUSED")
 object FurstuKvist : ModInitializer {
     const val MOD_ID = "furstukvist"
 

@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.registry.FuelRegistry
 import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
 
-@Suppress("UNUSED")
 object BlockItems {
 
     val SAWED_SPRUCE_LOG: Item = RegistryUtil.register(

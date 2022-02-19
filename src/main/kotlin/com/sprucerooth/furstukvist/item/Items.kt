@@ -5,7 +5,6 @@ import com.sprucerooth.furstukvist.util.RegistryUtil
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.item.Item
 
-@Suppress("UNUSED")
 object Items {
 
     val PAINT_BRUSH: Item = RegistryUtil.register(

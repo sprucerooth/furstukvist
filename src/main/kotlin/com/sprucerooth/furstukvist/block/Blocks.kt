@@ -4,7 +4,6 @@ import com.sprucerooth.furstukvist.Pigment
 import com.sprucerooth.furstukvist.util.RegistryUtil
 import net.minecraft.block.Block
 
-@Suppress("UNUSED")
 object Blocks {
 
     val SAWED_SPRUCE_LOG: Block =

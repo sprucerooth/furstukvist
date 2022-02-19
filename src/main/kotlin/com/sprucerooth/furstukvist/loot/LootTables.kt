@@ -7,7 +7,6 @@ import net.minecraft.entity.EntityType
 import net.minecraft.loot.entry.ItemEntry
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider
 
-@Suppress("UNUSED")
 object LootTables {
 
     init {
