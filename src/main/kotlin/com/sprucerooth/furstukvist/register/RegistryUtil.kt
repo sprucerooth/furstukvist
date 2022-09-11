@@ -1,4 +1,4 @@
-package com.sprucerooth.furstukvist.util
+package com.sprucerooth.furstukvist.register
 
 import com.sprucerooth.furstukvist.FurstuKvist
 import net.minecraft.block.Block
@@ -8,11 +8,11 @@ import net.minecraft.util.registry.Registry
 
 object RegistryUtil {
 
-    fun register(path: String, item: Item): Item {
+    fun <T : Item> register(path: String, item: T): Item {
         return Registry.register(Registry.ITEM, Identifier(FurstuKvist.MOD_ID, path), item)
     }
 
-    fun register(path: String, block: Block): Block {
+    fun <T : Block> register(path: String, block: T): T {
         return Registry.register(Registry.BLOCK, Identifier(FurstuKvist.MOD_ID, path), block)
     }
 }

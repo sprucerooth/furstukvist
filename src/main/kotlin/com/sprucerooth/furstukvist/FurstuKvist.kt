@@ -1,9 +1,9 @@
 package com.sprucerooth.furstukvist
 
-import com.sprucerooth.furstukvist.block.Blocks
-import com.sprucerooth.furstukvist.item.BlockItems
-import com.sprucerooth.furstukvist.item.Items
 import com.sprucerooth.furstukvist.loot.LootTables
+import com.sprucerooth.furstukvist.register.Items
+import com.sprucerooth.furstukvist.register.block.BlockItems
+import com.sprucerooth.furstukvist.register.block.Blocks
 import net.fabricmc.api.ModInitializer
 
 object FurstuKvist : ModInitializer {

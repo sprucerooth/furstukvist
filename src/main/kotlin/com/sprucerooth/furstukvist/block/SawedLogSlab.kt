@@ -29,12 +29,14 @@ private val AXIS = Properties.AXIS
 
 class SawedLogSlab(
     val color: Pigment? = Pigment.NONE,
-    settings: Settings? = FabricBlockSettings.of(Material.WOOD).strength(2.0F, 5.0F).sounds(BlockSoundGroup.WOOD)
+    settings: Settings? = FabricBlockSettings.of(Material.WOOD).strength(2.0F, 5.0F)
+        .sounds(BlockSoundGroup.WOOD)
         .requiresTool().breakByTool(FabricToolTags.AXES)
 ) : Block(settings) {
 
     init {
-        defaultState = stateManager.defaultState.with(TYPE, LogSlabType.NORTH_FACING).with(AXIS, Direction.Axis.X)
+        defaultState = stateManager.defaultState.with(TYPE, LogSlabType.NORTH_FACING)
+            .with(AXIS, Direction.Axis.X)
         FlammableBlockRegistry.getDefaultInstance().add(this, 4, 4)
     }
 
@@ -47,6 +49,8 @@ class SawedLogSlab(
     ): VoxelShape = SHAPES[state.get(TYPE)]!!
 
     override fun getPlacementState(ctx: ItemPlacementContext): BlockState {
+        println(ctx.blockPos)
+        println(ctx.hitPos)
         val targetedBlockState = ctx.world.getBlockState(ctx.blockPos)
         if (targetedBlockState.isOf(this)) return targetedBlockState.with(TYPE, LogSlabType.DOUBLE)
 
@@ -78,8 +82,6 @@ class SawedLogSlab(
     override fun hasSidedTransparency(state: BlockState): Boolean {
         return state.get(TYPE) != LogSlabType.DOUBLE
     }
-
-
 }
 
 private fun getSlabPositionFrom(playerFacingDirection: Direction, hitPos: Vec3d): LogSlabType {

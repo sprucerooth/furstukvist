@@ -18,9 +18,10 @@ private val FACING = Properties.HORIZONTAL_FACING
 
 class SawedLogBlock(
     val color: Pigment? = Pigment.NONE,
-    settings: Settings = FabricBlockSettings.of(Material.WOOD).strength(2.0F, 5.0F).sounds(BlockSoundGroup.WOOD)
-        .requiresTool().breakByTool(FabricToolTags.AXES)
+    settings: Settings = FabricBlockSettings.of(Material.WOOD).strength(3.0F)
+        .sounds(BlockSoundGroup.WOOD).requiresTool().breakByTool(FabricToolTags.AXES)
 ) : PillarBlock(settings) {
+    
     init {
         FlammableBlockRegistry.getDefaultInstance().add(this, 2, 2)
         defaultState = stateManager.defaultState.with(FACING, Direction.NORTH)

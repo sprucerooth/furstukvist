@@ -2,9 +2,9 @@ package com.sprucerooth.furstukvist.item
 
 import com.google.common.collect.ImmutableMap
 import com.sprucerooth.furstukvist.Pigment
-import com.sprucerooth.furstukvist.block.Blocks
 import com.sprucerooth.furstukvist.block.SawedLogBlock
 import com.sprucerooth.furstukvist.block.SawedLogSlab
+import com.sprucerooth.furstukvist.register.block.Blocks
 import net.minecraft.block.Block
 import net.minecraft.block.BlockState
 import net.minecraft.client.item.TooltipContext
@@ -17,10 +17,13 @@ import net.minecraft.text.TranslatableText
 import net.minecraft.util.ActionResult
 import net.minecraft.world.World
 
-val PAINTED_LOGS: ImmutableMap<Pigment, Block> = ImmutableMap.of(Pigment.RED, Blocks.SAWED_SPRUCE_LOG_RED)
-val PAINTED_LOG_SLABS: ImmutableMap<Pigment, Block> = ImmutableMap.of(Pigment.RED, Blocks.SAWED_SPRUCE_LOG_SLAB_RED)
+val PAINTED_LOGS: ImmutableMap<Pigment, Block> =
+    ImmutableMap.of(Pigment.RED, Blocks.SAWED_SPRUCE_LOG_RED)
+val PAINTED_LOG_SLABS: ImmutableMap<Pigment, Block> =
+    ImmutableMap.of(Pigment.RED, Blocks.SAWED_SPRUCE_LOG_SLAB_RED)
 
-class PaintBrushItem(settings: Settings, private val color: Pigment? = Pigment.NONE) : Item(settings) {
+class PaintBrushItem(settings: Settings, private val color: Pigment? = Pigment.NONE) :
+    Item(settings) {
 
     override fun useOnBlock(context: ItemUsageContext): ActionResult {
         val world = context.world
@@ -41,7 +44,12 @@ class PaintBrushItem(settings: Settings, private val color: Pigment? = Pigment.N
         } else return ActionResult.PASS
     }
 
-    override fun appendTooltip(stack: ItemStack, world: World?, tooltip: MutableList<Text>, context: TooltipContext) {
+    override fun appendTooltip(
+        stack: ItemStack,
+        world: World?,
+        tooltip: MutableList<Text>,
+        context: TooltipContext
+    ) {
         if (color != Pigment.NONE) tooltip.add(TranslatableText("${translationKey}.tooltip"))
     }
 
